@@ -1,0 +1,118 @@
+:root {
+    --textColor: rgb(10, 10, 9);
+    --bgColor: rgb(252, 247, 230);
+    --textLogo: rgb(75, 36, 17);
+  }
+
+
+
+.hero_contact {
+  background-image: url(/img/contact_us.jpg);
+}
+
+.hero_contact{
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_contact article{
+  width: 50%;
+}
+
+.hero_contact article h1{
+  text-align: center;
+  font-size: 66px;
+  color: var(--bgColor);
+}
+
+
+.hero_contact article p{
+  color: var(--bgColor);
+  font-size: 24px;
+  text-align: center;
+
+}
+
+.contact_us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    background-color: var(--bgColor);
+}
+
+.contact_us .form {
+    width: 500px;
+    height: 440px;
+    background: #e6e6e675;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px var(--textLogo);
+    position: relative;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    font-family: "Montserrat", sans-serif;
+
+  }
+  .contact_us h2 {
+    margin: 50px 0;
+    padding-bottom: 10px;
+    font-size: 56px;
+    color: var(--textColor);
+    border-bottom: 3px solid #78788c;
+  }
+  .contact_us .form input {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    transition: all 0.3s;
+    border-bottom: 2px solid #bebed2;
+  }
+  .contact_us .form input:focus {
+    border-bottom: 2px solid #78788c;
+  }
+  .contact_us .form p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: var(--textColor);
+  }
+  .contact_us .form button {
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    border: 2px solid var(--textLogo);
+    background: 0;
+    color: var(--textLogo);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .contact_us .form button:hover {
+    background: var(--textLogo);
+    color: var(--bgColor);
+  }
+  .contact_us .form div {
+    content: "Hi";
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    background: rgba(68, 68, 68, 0.958);
+    color: #fff;
+    width: 320px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 10px 10px 40px -14px #000;
+  }
+  .contact_us .form span {
+    margin: 0 5px 0 15px;
+  }
+  
+

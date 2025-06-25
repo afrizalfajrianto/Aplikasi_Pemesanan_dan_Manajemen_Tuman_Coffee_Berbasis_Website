@@ -1,0 +1,135 @@
+:root {
+    --textColor: rgb(10, 10, 9);
+    --bgColor: rgb(252, 247, 230);
+    --textLogo: rgb(75, 36, 17);
+  }
+  
+.register{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Jost', sans-serif;
+	background: var(--bgColor);
+
+	background-attachment: fixed;
+	background-position: center/cover;
+	background-size:cover ;
+}
+
+.register .main{
+	margin-top: 200px;
+	margin-bottom: 100px;
+	width: 350px;
+	height: 550px;
+	overflow: hidden;
+	background-color: var(--bgColor);
+	border-radius: 4px;
+	box-shadow: 5px 20px 50px var(--textLogo);
+}
+#chk{
+	display: none;
+}
+.register .signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+.register .title{
+	color: var(--textLogo);
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+.register input {
+    outline: none;
+    width: 60%;
+	height: 20px;
+	background: transparent;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 20px 0;
+    border: none;
+}
+
+.signup input{
+    color: var(--textColor);
+	border-bottom: 1px solid var(--textLogo);
+}
+
+.login input {
+    color: var(--bgColor);
+    border-bottom: 1px solid var(--bgColor);
+}
+
+.login input::placeholder {
+    color: var(--bgColor);
+}
+
+.signup .button_register{
+    color: var(--bgColor);
+	background: var(--textLogo);
+	border: 2px solid var(--textLogo);
+	
+	
+}
+.login .button_login {
+    color: var(--textLogo);
+	background: var(--bgColor);
+	border: 2px solid var(--bgColor);
+}
+.register button{
+    border-radius: 5px;
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+    font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.signup .button_register:hover{
+	background: var(--bgColor);
+    color: var(--textLogo);
+    transition: all 1s;
+}
+
+.login .button_login:hover {
+    background: var(--textLogo);
+    color: var(--bgColor);
+    transition: all 1s;
+}
+
+
+.register .login{
+	height: 460px;
+	background: var(--textLogo);
+	border-radius: 60% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
+}
+.register .login label{
+	color: var(--bgColor);
+	transform: scale(.6);
+}
+
+#chk:checked ~ .login{
+	transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+	transform: scale(1);	
+}
+#chk:checked ~ .signup label{
+	transform: scale(.6);
+}

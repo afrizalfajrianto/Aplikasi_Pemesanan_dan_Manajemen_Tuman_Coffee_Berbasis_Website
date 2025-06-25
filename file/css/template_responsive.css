@@ -1,0 +1,275 @@
+:root {
+  --textColor: rgb(10, 10, 9);
+  --bgColor: rgb(252, 247, 230);
+  --textLogo: rgb(75, 36, 17);
+  --textColor2: rgb(245, 231, 187);
+}
+@media (max-width: 480px) {
+  /* Gaya untuk perangkat mobile */
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Gaya untuk perangkat tablet */
+  .nav-left ul.menu {
+    display: none; /* Sembunyikan menu */
+  }
+
+  #hamburger-menu {
+    display: block;
+  }
+
+  .nav-left ul.menu.active {
+    display: block; /* Tampilkan menu ketika hamburger menu di klik */
+    position: absolute;
+
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    top: 100px; /* Sesuaikan dengan tinggi navbar */
+    left: 0;
+    padding: 10px;
+  }
+
+  .nav-left ul.menu li {
+    margin: 10px 0;
+  }
+
+  .nav-right ul li {
+    padding: 2px;
+  }
+
+  .submenu {
+    position: static; /* Submenu akan berada di dalam konteks menu */
+    box-shadow: none;
+    padding: 0;
+    margin-top: 100px;
+  }
+
+  header ul .submenu li a {
+    font-size: 30px;
+  }
+
+  .logo {
+    position: absolute;
+    left: 41.9%;
+    top: 0;
+  }
+
+  .inbox {
+    height: 100vh;
+    padding: 40px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .inbox .content {
+    margin-top: 20px;
+    padding: 0;
+    width: 70%;
+  }
+
+  .inbox .content:first-of-type {
+    border: none;
+    border-bottom: 1px solid var(--bgColor);
+  }
+
+  .inbox > .content h1 {
+    max-width: 500px;
+    text-align: center;
+    height: 250px;
+  }
+
+  .char {
+    font-size: 34px;
+  }
+  /* Section Footer */
+
+  footer .menu-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  footer .menu-footer .icon {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  footer .menu-footer .icon * {
+    color: var(--textColor2);
+    font-size: 36px;
+  }
+
+  footer .content-footer {
+    display: flex;
+    gap: 40px;
+  }
+
+  footer p img {
+    width: 80px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Gaya untuk desktop kecil dan tablet besar */
+  .nav-left ul.menu {
+    display: none; /* Sembunyikan menu */
+  }
+
+  #hamburger-menu {
+    display: block;
+  }
+
+  .nav-left ul.menu.active {
+    display: block; /* Tampilkan menu ketika hamburger menu di klik */
+    position: absolute;
+
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    top: 100px; /* Sesuaikan dengan tinggi navbar */
+    left: 0;
+    padding: 10px;
+  }
+
+  .nav-left ul.menu li {
+    margin: 10px 0;
+  }
+
+  .nav-right ul li {
+    padding: 2px;
+  }
+
+  .submenu {
+    position: static; /* Submenu akan berada di dalam konteks menu */
+    box-shadow: none;
+    padding: 0;
+    margin-top: 100px;
+  }
+  .logo {
+    position: absolute;
+    left: 41.9%;
+    top: 0;
+  }
+  /* Section Inbox */
+
+  .inbox {
+    height: 100vh;
+    padding: 40px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .inbox .content {
+    margin-top: 20px;
+    padding: 0;
+    width: 70%;
+  }
+
+  .inbox .content:first-of-type {
+    border: none;
+    border-bottom: 1px solid var(--bgColor);
+  }
+
+  .inbox > .content h1 {
+    max-width: 500px;
+    text-align: center;
+    height: 200px;
+  }
+
+  .char {
+    font-size: 34px;
+  }
+
+  /* Section Footer */
+  footer {
+    padding: 50px;
+    background-color: var(--textColor);
+    color: var(--textColor2);
+  }
+
+  footer .menu-footer {
+    display: flex;
+    gap: 30px;
+
+    justify-content: space-between;
+  }
+
+  footer .menu-footer .icon {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  footer .menu-footer .icon * {
+    color: var(--textColor2);
+    font-size: 36px;
+  }
+
+  footer .menu-footer .icon *:hover {
+    color: #6c6c6c;
+    transition: 0.5s;
+  }
+
+  footer .content-footer {
+    display: flex;
+    gap: 40px;
+  }
+
+  footer .content-footer .row div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  footer .content-footer .row div a {
+    color: #545252;
+    text-decoration: none;
+    margin: 4px 0;
+  }
+
+  footer .content-footer .row div a::after {
+    content: "";
+    display: block;
+
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--bgColor);
+    transform: scaleX(0);
+    transition: 0.3s linear;
+  }
+
+  footer .content-footer .row div a:hover::after {
+    transform: scaleX(1);
+  }
+
+  footer .content-footer .row div a:hover {
+    color: #909090;
+    transition: 0.5s;
+  }
+
+  footer p {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  footer p img {
+    width: 80px;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position-x: -500%;
+    }
+    100% {
+      background-position-x: 500%;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Gaya untuk desktop medium hingga besar */
+  .char {
+    font-size: 34px;
+  }
+}

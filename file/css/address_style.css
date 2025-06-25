@@ -1,0 +1,45 @@
+:root {
+  --textColor: rgb(10, 10, 9);
+  --bgColor: rgb(252, 247, 230);
+  --textLogo: rgb(75, 36, 17);
+  --textColor2: rgb(245, 231, 187);
+}
+.address_edit {
+  display: flex;
+  flex-direction: column;
+}
+
+.address_edit label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.address_edit input {
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid rgb(132, 132, 132);
+  border-radius: 5px;
+}
+
+.address_edit .done {
+  background: #31ae2e;
+  font-family: "Salsa";
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--bgColor);
+  letter-spacing: 2px;
+  width: 25%;
+}
+
+.address_edit .done:hover {
+  background: transparent;
+  transition: 1s;
+  cursor: pointer;
+  color: #31ae2e;
+  border: 2px solid #31ae2e;
+}
+
+.details h4 {
+  margin-bottom: 10px;
+}
+

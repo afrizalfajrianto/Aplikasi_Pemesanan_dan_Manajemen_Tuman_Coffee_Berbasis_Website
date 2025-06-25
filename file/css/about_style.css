@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+:root {
+  --textColor: rgb(10, 10, 9);
+  --bgColor: rgb(252, 247, 230);
+  --textLogo: rgb(75, 36, 17);
+  --textColor2: rgb(245, 231, 187);
+}
+
+.hero_about {
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_about article {
+  width: 80%;
+}
+
+.hero_about article h1 {
+  text-align: center;
+  font-size: 66px;
+  color: var(--textColor2);
+}
+
+.hero_about article p {
+  color: var(--textColor2);
+  font-size: 24px;
+  text-align: center;
+}
+
+.about .content h1 {
+  text-align: left;
+  font-size: 48px;
+  color: var(--textColor);
+}
+
+.about .content p {
+  text-align: left;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--textColor);
+}
+
+.about {
+  background-color: var(--textColor2);
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px;
+  flex-direction: row;
+}
+
+.about .content {
+  width: 60%;
+}
+
+.about .content .social-media {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 2rem;
+  position: relative;
+}
+
+.about .content .social-media ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+  padding-left: 0;
+}
+
+.about .content .social-media ul li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--textColor);
+  font-size: 24px;
+}
+
+.about .content .social-media ul li a {
+  padding: 50px;
+  background-color: var(--textLogo);
+  color: var(--textColor2);
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.about .content .social-media ul li a:hover {
+  background-color: rgb(136, 88, 65);
+  box-shadow: 10px 5px 10px rgba(81, 80, 80, 0.364);
+  transition: all 1s;
+}
+
+.about .content .social-media ul li a ion-icon {
+  font-size: 34px;
+}
+
+.about aside {
+  text-align: center;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f1dfbed5;
+  width: 40%;
+  color: var(--textColor);
+}
+
+.about aside .profile h3 {
+  font-size: 24px;
+  border-bottom: 1px solid var(--textLogo);
+  padding-bottom: 10px;
+}
+
+.about aside .profile img {
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.about aside .profile table {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.about aside .profile table tr td {
+  color: #817163;
+}
+
+/* Responsive styles */
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .hero_about article h1 {
+    font-size: 32px;
+  }
+  .hero_about article p {
+    font-size: 16px;
+  }
+  .about {
+    padding: 20px;
+    flex-direction: column;
+  }
+  .about .content {
+    width: 100%;
+  }
+  .about aside {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero_about article h1 {
+    font-size: 44px;
+  }
+  .hero_about article p {
+    font-size: 18px;
+  }
+  .about .content h1 {
+    font-size: 40px;
+  }
+  .about {
+    padding: 50px;
+  }
+  .about .content {
+    width: 100%;
+  }
+  .about aside {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* Small desktops and large tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero_about article h1 {
+    font-size: 54px;
+  }
+  .hero_about article p {
+    font-size: 22px;
+  }
+  .about .content h1 {
+    font-size: 44px;
+  }
+  .about {
+    padding: 70px;
+  }
+  .about .content {
+    width: 70%;
+  }
+  .about aside {
+    width: 30%;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  /* Gaya untuk desktop medium hingga besar */
+}
+

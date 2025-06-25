@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Poppins:wght@500;700&family=Quicksand:wght@500;700&display=swap");
+
+:root {
+  --textColor: rgb(10, 10, 9);
+  --bgColor: rgb(252, 247, 230);
+  --textLogo: rgb(75, 36, 17);
+  --textColor2: rgb(245, 231, 187);
+}
+
+
+/* Hero Section */
+.hero_sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero_sec:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 10%,
+    rgba(234, 221, 192, 0) 50%
+  );
+}
+.hero_sec article {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.hero_sec article h1 {
+  color: var(--textColor2);
+  font-size: 56px;
+}
+
+.hero_sec article p {
+  color: var(--textColor2);
+  font-size: 24px;
+}
+
+.btn1 {
+  margin-top: 30px;
+  padding: 20px;
+  transition: all 0.5s;
+  position: relative;
+  cursor: pointer;
+}
+.btn1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 40px;
+  background: var(--textColor2);
+  transition: all 0.3s;
+}
+.btn1:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+.btn1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 40px;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 2px solid var(--textColor2);
+  transform: scale(1.2, 1.2);
+}
+
+.btn1:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.btn1:hover a {
+  color: var(--textColor2);
+}
+
+.btn a {
+  text-decoration: none;
+  color: var(--textLogo);
+  font-size: 26px;
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+}
+
+.hero_sec img {
+  width: 100%;
+}
+
+/* Product months section */
+.product-months {
+  position: relative;
+  height: 100vh;
+}
+
+.product-months .slide .item {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  box-shadow: 0 30px 50px #505050;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.product-months .slide .item:nth-child(1),
+.product-months .slide .item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.product-months .slide .item:nth-child(3) {
+  left: 50%;
+}
+.product-months .slide .item:nth-child(4) {
+  left: calc(50% + 220px);
+}
+.product-months .slide .item:nth-child(5) {
+  left: calc(50% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.product-months .slide .item:nth-child(n + 6) {
+  left: calc(50% + 660px);
+  opacity: 0;
+}
+
+.product-months .item .content {
+  position: absolute;
+  top: 46%;
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  color: var(--textColor);
+  transform: translate(0, -50%);
+  font-family: 'Salsa', "Oswald", sans-serif;
+  display: none;
+}
+
+.slide .item:nth-child(2) .content {
+  display: block;
+}
+
+.product-months .content .name {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 1s ease-in-out 1 forwards;
+}
+
+.product-months .content .des {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.product-months .content button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.6s 1 forwards;
+  border-radius: 5px;
+  background: none;
+  border: 2px solid var(--textLogo);
+
+  position: relative;
+  transition: all 0.35s;
+}
+
+.product-months .content button a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--textLogo);
+  position: relative;
+  z-index: 2;
+  font-family: 'Salsa', "Oswald", sans-serif;
+}
+
+.product-months .content button:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 4px;
+  background: rgb(155, 103, 76);
+  transition: all 0.5s;
+  
+}
+
+.product-months .content button:hover:after {
+  width: 100%;
+}
+
+.product-months .content button:hover a{
+  color: var(--bgColor);
+}
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+.product-months .button {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  border-radius: 10px;
+
+}
+
+.product-months .button button {
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  background-color: var(--bgColor);
+  color: var(--textLogo);
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border: 1px solid #ffffff;
+  transition: 0.3s;
+}
+
+.product-months .button button:hover {
+  background: var(--textLogo);
+  color: var(--bgColor);
+}
+
+/* Section highlight */
+.highlight {
+  display: flex;
+  height: 100vh;
+  background-color: var(--bgColor);
+  align-items: center;
+}
+.highlight > div {
+  display: flex;
+  justify-content: space-between; /* Untuk membuat section berada di tengah */
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(235, 228, 204, 0.475);
+  height: 230px;
+  padding: 0 100px;
+}
+
+.highlight article {
+  display: flex;
+  align-items: center;
+}
+
+.highlight article img {
+  margin-right: 10px; /* Jarak antara gambar dengan content */
+  width: 100px;
+}
+
+.highlight article .content {
+  max-width: 400px; /* Atur lebar maksimum konten */
+}
+
+/* Section Definition */
+.definition {
+  height: 100vh;
+  background: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.definition .container h1 {
+  margin: 0;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: var(--textColor2);
+  font-size: 50px;
+}
+
+.definition .container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+span {
+  display: inline-block;
+  overflow: hidden;
+  animation: 0.3s swift-up ease-in-out forwards;
+}
+
+i {
+  font-style: normal;
+  position: relative;
+  top: 50px;
+  animation: 0.5s swift-up ease-in-out forwards;
+}
+
+@keyframes swift-up {
+  to {
+    top: 0;
+  }
+}
+
+
+.definition button {
+  border-style: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  width: auto;
+  padding: 0px;
+  margin: 10px auto;
+  border: 2px solid var(--bgColor);
+  border-radius: 30px;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+.definition button:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+.definition button:hover a {
+  color: #000;
+}
+.definition button a {
+  position: relative;
+  padding: 12px 20px;
+  display: block;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: var(--bgColor);
+  font-weight: bold;
+  z-index: 2;
+  text-decoration: none;
+  font-family: 'Salsa', "Oswald", sans-serif;
+}
+.definition button a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 50px;
+  background-color: var(--bgColor);
+
+  right: 0px;
+  top: 0px;
+  z-index: -1;
+  transform-origin: right;
+  transition: all 0.5s ease-in-out;
+}
+.definition button:hover a::before {
+  width: 100%;
+  transform-origin: left;
+  left: 0px;
+  right: auto;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Section Highlight-2 */
+
+.highlight-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 40vh;
+  background-color: var(--bgColor);
+}
+
+.highlight-2 .scroll {
+  flex: 1;
+  align-items: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 4rem;
+  background-color: rgba(235, 228, 204, 0.475);
+}
+
+.highlight-2 .articles {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+}
+
+.highlight-2 article {
+  padding: 20px;
+  border: 0px;
+}
+
+.highlight-2 article:last-child {
+  margin-right: 0; /* Menghapus margin-right pada artikel terakhir */
+}
+
+.highlight-2 article h1 {
+  font-size: 26px;
+}
+
+.highlight-2 .scroll p {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 0;
+}
+
+.highlight-2 .RightToLeft {
+  animation: RightToLeft 10s infinite linear;
+}
+
+@keyframes RightToLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.our-location{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px;
+}
+
+.our-location img {
+  width: 50%;
+  border-radius: 20px;
+}
+
+.our-location div {
+  margin-left: 20px;
+  width: 46%;
+  line-height: 30px;
+}
+
+.our-location div h1 {
+  font-size: 34px;
+  padding-bottom: 20px;
+}
+
+.our-location button {
+  border-style: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0px;
+  margin-top: 30px;
+  background-color: var(--textLogo);
+  border: 2px solid var(--textLogo);
+  border-radius: 30px;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+.our-location button:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+.our-location button:hover a {
+  color: var(--textLogo);
+}
+.our-location button a {
+  position: relative;
+  padding: 12px 20px;
+  display: block;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-weight: bold;
+  z-index: 2;
+  text-decoration: none;
+  font-family: 'Salsa', "Oswald", sans-serif;
+}
+.our-location button a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 50px;
+  background-color: var(--bgColor);
+
+  right: 0px;
+  top: 0px;
+  z-index: -1;
+  transform-origin: right;
+  transition: all 0.5s ease-in-out;
+}
+.our-location button:hover a::before {
+  width: 100%;
+  transform-origin: left;
+  left: 0px;
+  right: auto;
+  transition: all 0.5s ease-in-out;
+}

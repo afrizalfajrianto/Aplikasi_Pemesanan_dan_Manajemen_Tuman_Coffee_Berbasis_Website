@@ -1,0 +1,202 @@
+:root {
+    --textColor: rgb(10, 10, 9);
+    --bgColor: rgb(252, 247, 230);
+    --textLogo: rgb(75, 36, 17);
+  }
+
+  .hero_about {
+    background-image: url(/img/about.jpg);
+  }
+  
+  
+ .hero_about{
+      height: 100vh;
+      background-attachment: fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .hero_about article {
+    width: 50%;
+  }
+
+  .hero_about article h1 {
+    text-align: center;
+    font-size: 66px;
+    color: var(--bgColor);
+  }
+  
+  
+  .hero_about article p{
+    color: var(--bgColor);
+    font-size: 24px;
+    text-align: center;
+  
+  }
+  
+  .about .content h1 {
+    text-align: left;
+    font-size: 48px;
+    color: var(--textColor);
+  }
+  
+  .about .content p {
+    text-align: left;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--textColor);
+  }
+  .about {
+    background-color: var(--bgColor);
+    margin-bottom: 0;
+    display: flex;
+    padding: 100px;
+    flex-direction: row;
+  }
+  
+  .about .content {
+    width: 60%;
+  }
+  
+  .about .content .social-media {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+  }
+  
+  .about .content .social-media ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    padding-left: 0;
+  }
+  
+  .about .content .social-media ul li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--textColor);
+    font-size: 24px;
+  }
+  
+  .about .content .social-media ul li a {
+    padding: 40px;
+    background-color: var(--textLogo);
+    color: #fafafa;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .about .content .social-media ul li a:hover {
+    background-color: rgb(136, 88, 65);
+    box-shadow: 10px 5px 10px rgba(81, 80, 80, 0.364);
+    transition: all 1s;
+  }
+  
+  .about .content .social-media ul li a ion-icon {
+    font-size: 34px;
+  }
+  
+  .about aside {
+    text-align: center;
+  
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #e5dbd4be;
+    width: 40%;
+    color: var(--textColor);
+  }
+  
+  .about aside .profile h3 {
+    font-size: 24px;
+    border-bottom: 1px solid var(--textLogo);
+    padding-bottom: 10px;
+  }
+  
+  .about aside .profile img {
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  .about aside .profile table {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+  }
+  
+  .about aside .profile table tr td {
+    color: #817163;
+  }
+  
+  /* Media Queries */
+  
+  /* Layar Lebar */
+  @media (max-width: 1500px) {
+    .about {
+      flex-wrap: wrap;
+    }
+  
+    .about .content .social-media ul {
+      flex-wrap: wrap;
+    }
+  }
+  
+  /* Tablet */
+  @media (max-width: 800px) {
+    p,
+    a {
+      font-size: 80.5%;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-size: 70%;
+    }
+  
+    .about .content .social-media {
+      min-width: 400px;
+    }
+    .about .content .social-media ul li a {
+      margin: 10px;
+    }
+    .about .content .social-media ul li a img {
+      width: auto;
+    }
+    .about .content .social-media ul li {
+      font-size: 14px;
+    }
+    .about aside {
+      margin-top: 2rem;
+    }
+  }
+  /* Mobile-Phone */
+  @media (max-width: 500px) {
+    * {
+      font-size: 60%;
+    }
+  
+    .about .content .social-media {
+      min-width: 200px;
+    }
+    .about .content .social-media ul li {
+      font-size: 11px;
+    }
+    .about .content .social-media ul li a {
+      padding: 20px;
+      margin: 10px;
+    }
+    .about .content .social-media ul li a img {
+      width: 20px;
+    }
+  
+    .about .profile {
+      font-size: 100%;
+    }
+  }
+  

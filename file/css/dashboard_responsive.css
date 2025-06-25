@@ -1,0 +1,279 @@
+:root {
+  --textColor: rgb(10, 10, 9);
+  --bgColor: rgb(252, 247, 230);
+  --textLogo: rgb(75, 36, 17);
+  --textColor2: rgb(245, 231, 187);
+}
+
+@media (max-width: 480px) {
+  /* Styles for mobile devices */
+  body {
+    font-size: 14px;
+  }
+
+  .hero_sec article h1 {
+    font-size: 32px;
+  }
+
+  .hero_sec article p {
+    font-size: 16px;
+  }
+
+  .btn1 {
+    padding: 10px;
+  }
+
+  .product-months .slide .item {
+    width: 120px;
+    height: 200px;
+  }
+
+  .product-months .slide .item:nth-child(3) {
+    left: 50%;
+  }
+
+  .product-months .slide .item:nth-child(4) {
+    left: calc(50% + 160px);
+  }
+
+  .product-months .slide .item:nth-child(5) {
+    left: calc(50% + 280px);
+  }
+
+  .product-months .slide .item:nth-child(n + 6) {
+    left: calc(50% + 400px);
+    opacity: 0;
+  }
+
+  .product-months .content .name {
+    font-size: 24px;
+  }
+
+  .product-months .item .content {
+    left: 20px;
+    width: 200px;
+  }
+
+  .highlight > div {
+    gap: 8px;
+    height: 180px;
+    padding: 0 8px;
+  }
+
+  .highlight article img {
+    margin-right: 4px;
+    width: 60px;
+  }
+
+  .highlight article .content {
+    max-width: 180px;
+    font-size: 50%;
+  }
+
+  .definition .container h1 {
+    font-size: 20px;
+  }
+
+  /* Section Highlight-2 */
+  .highlight-2 {
+    height: 30vh;
+  }
+
+  .highlight-2 article h1 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .highlight-2 .scroll p {
+    font-size: 10px;
+  }
+
+  .our-location {
+    padding: 80px 0 0 0;
+    justify-content: center;
+  }
+
+  .our-location img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .our-location div {
+    margin-left: 20px;
+    text-align: center;
+    width: auto;
+    line-height: 25px;
+    margin-bottom: 40px;
+  }
+
+  .our-location div h1 {
+    font-size: 28px;
+    padding: 15px 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Styles for tablet devices */
+  .hero_sec article h1 {
+    font-size: 44px;
+  }
+
+  .hero_sec article p {
+    font-size: 20px;
+  }
+
+  .btn1 {
+    padding: 15px;
+  }
+
+  .product-months .slide .item {
+    width: 150px;
+    height: 250px;
+  }
+
+  .product-months .slide .item:nth-child(3) {
+    left: 70%;
+  }
+
+  .product-months .slide .item:nth-child(4) {
+    left: calc(70% + 120px);
+  }
+
+  .product-months .slide .item:nth-child(5) {
+    left: calc(70% + 340px);
+  }
+
+  .product-months .slide .item:nth-child(n + 6) {
+    left: calc(70% + 560px);
+    opacity: 0;
+  }
+
+  .product-months .content .name {
+    font-size: 30px;
+  }
+
+  .product-months .item .content {
+    left: 30px;
+    width: 260px;
+  }
+
+  .highlight > div {
+    gap: 10px;
+    height: 200px;
+    padding: 0 10px;
+  }
+
+  .highlight article img {
+    margin-right: 4px; /* Gap between image and content */
+    width: 70px;
+  }
+
+  .highlight article .content {
+    max-width: 200px; /* Set max content width */
+    font-size: 55%;
+  }
+
+  .definition .container h1 {
+    font-size: 25px;
+  }
+
+  /* Section Highlight-2 */
+  .highlight-2 {
+    height: 35vh;
+  }
+
+  .highlight-2 article h1 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .highlight-2 .scroll p {
+    font-size: 12px;
+  }
+
+  .our-location {
+    padding: 100px 0 0 0;
+    justify-content: center;
+  }
+
+  .our-location img {
+    width: auto;
+    border-radius: 20px;
+  }
+
+  .our-location div {
+    margin-left: 40px;
+    text-align: center;
+    width: auto;
+    line-height: 30px;
+    margin-bottom: 60px;
+  }
+
+  .our-location div h1 {
+    font-size: 34px;
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for small desktops and large tablets */
+  .highlight > div {
+    gap: 10px;
+    height: 200px;
+    padding: 0 10px;
+  }
+
+  .highlight article .content {
+    max-width: 200px; /* Set max content width */
+    font-size: 65%;
+  }
+
+  .definition .container h1 {
+    font-size: 45px;
+  }
+
+  .definition .container {
+    width: auto;
+  }
+
+  .definition button a {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  /* Section our-location */
+  .our-location {
+    padding: 100px;
+    justify-content: center;
+  }
+
+  .our-location img {
+    width: auto;
+    border-radius: 20px;
+  }
+
+  .our-location div {
+    margin-left: 40px;
+    text-align: center;
+    width: auto;
+    line-height: 30px;
+    margin-bottom: 60px;
+  }
+
+  .our-location div h1 {
+    font-size: 34px;
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Styles for medium to large desktops */
+  .definition .container {
+    width: auto;
+    margin: 0 10%;
+  }
+
+  :root {
+    --headingSize: 50px;
+  }
+}

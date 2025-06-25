@@ -1,0 +1,29 @@
+:root {
+    --textColor: rgb(10, 10, 9);
+    --bgColor: rgb(252, 247, 230);
+    --textLogo: rgb(75, 36, 17);
+    --textColor2: rgb(245, 231, 187);
+  }
+  @media (max-width: 480px) {
+    /* Gaya untuk perangkat mobile */
+    hero-product article h1 {
+        font-size: 40px;
+      }
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+    /* Gaya untuk perangkat tablet */
+    .hero-product article h1 {
+        font-size: 60px;
+      }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    /* Gaya untuk desktop kecil dan tablet besar */
+    
+  }
+  
+  @media (min-width: 1025px) {
+    /* Gaya untuk desktop medium hingga besar */
+  }
+  

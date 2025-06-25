@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Poppins:wght@500;700&family=Quicksand:wght@500;700&display=swap");
+
+:root {
+  --textColor: rgb(10, 10, 9);
+  --bgColor: rgb(252, 247, 230);
+  --textLogo: rgb(75, 36, 17);
+}
+
+.hero-profile {
+    display: flex;
+    padding: 200px 100px;
+    align-items: start;
+    gap: 50px;
+    background-color: var(--bgColor);
+}
+
+.hero-profile .hero-active {
+    content: "";
+    color: var(--textColor);
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--textColor);
+}
+
+.nav-hero {
+    width: 50%;
+    font-size: 56px;
+    align-items: start;
+    display: block;
+    justify-content: space-between;
+}
+
+.nav-hero p {
+    font-size: 18px;
+    color: var(--textColor);
+}
+
+.nav-hero ul li {
+    list-style: none;
+    transition: all ease 0.3s;
+    font-weight: bold;
+}
+
+.nav-hero ul li a {
+    text-decoration: none;
+    color: #7d7d7d99;
+}
+
+.nav-hero ul li *:hover {
+    color: var(--textColor);
+    transition: all 1s;
+}
+
+.nav-hero ul li .hover::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--textColor);
+    transform: scaleX(0);
+    transition: 0.3s linear;
+}
+  
+.nav-hero ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.account {
+    display: block;
+    width: 50%;
+    color: var(--textColor);
+}
+
+.account h1 {
+    padding: 20px 0;
+    font-size: 44px;
+}
+
+.account .details {
+    font-size: 24px;
+}
+
+.account .details span {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.swipe-in {
+    opacity: 0;
+    transform: translateY(50px); /* Geser teks ke bawah */
+    animation: swipeInAnimation 4s ease forwards;
+}
+
+@keyframes swipeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for opening details */
+details[open] summary ~ * {
+    animation: open 0.3s ease-in-out;
+}
+
+@keyframes open {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Style for details summary */
+details summary {
+    width: 100%;
+    padding: 0.5rem 0;
+    border-top: 1px solid black;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 300;
+    list-style: none;
+    outline: 0;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary:after {
+    content: "+";
+    color: black;
+    position: absolute;
+    font-size: 1.75rem;
+    line-height: 0;
+    margin-top: 0.75rem;
+    right: 0;
+    font-weight: 200;
+    transform-origin: center;
+    transition: 200ms linear;
+}
+
+details[open] summary:after {
+    transform: rotate(45deg);
+    font-size: 2rem;
+}
+
+/* Style for details content */
+details p {
+    font-size: 0.95rem;
+    margin: 0 0 1rem;
+    padding-top: 1rem;
+    font-weight: bold;
+}
+
+details p span {
+    font-weight: normal;
+}
+
+/* Flex display for details */
+
+/* Order container */
+.order {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Order image */
+.order img {
+    margin: 20px;
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* Order content */
+.order .content {
+    flex-grow: 1;
+}
+
+.order .content .detail_order {
+    
+    width: 100%;
+}
+
+.order .button {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.order button {
+    padding: 10px;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    border: 2px solid;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.order .batal {
+    color: #d62b2b;
+    border-color: #d62b2b;
+}
+
+.order .terima {
+    color: #31ae2e;
+    border-color: #31ae2e;
+}
+
+.order .batal:hover {
+    background-color: #d62b2b;
+    color: #fff;
+}
+
+.order .terima:hover {
+    background-color: #31ae2e;
+    color: #fff;
+}
+
+.order .content h1 span {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.account .edit {
+    display: flex;
+    justify-content: right;
+    text-decoration: none;
+    color: rgb(151, 151, 151);
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.account .edit:hover {
+    color: var(--textColor);
+    transition: 1s;
+}
+
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .hero-profile {
+        flex-direction: column;
+        padding: 100px 20px;
+        align-items: center;
+    }
+
+    .nav-hero {
+        width: 100%;
+        font-size: 32px;
+    }
+
+    .account {
+        width: 100%;
+        text-align: center;
+    }
+
+    .account h1 {
+        font-size: 32px;
+    }
+
+    .account .details {
+        font-size: 18px;
+    }
+
+    .account .details span {
+        font-size: 16px;
+    }
+
+    .order {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .order img {
+        margin: 10px auto;
+        width: 100px;
+        height: 140px;
+    }
+
+    .order .content {
+        text-align: center;
+    }
+
+    .order .button {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Tablet Devices */
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero-profile {
+        flex-direction: column;
+        padding: 150px 40px;
+        align-items: center;
+    }
+
+    .nav-hero {
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .account {
+        width: 100%;
+        text-align: left;
+    }
+
+    .account h1 {
+        font-size: 36px;
+    }
+
+    .account .details {
+        font-size: 20px;
+    }
+
+    .account .details span {
+        font-size: 18px;
+    }
+
+    .order {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .order img {
+        margin: 15px auto;
+        width: 110px;
+        height: 150px;
+    }
+
+    .order .content {
+        text-align: left;
+    }
+
+    .order .button {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Small Desktop and Large Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-profile {
+        padding: 150px 50px;
+    }
+
+    .nav-hero {
+        width: 100%;
+        font-size: 48px;
+    }
+
+    .account {
+        width: 100%;
+        text-align: left;
+    }
+
+    .account h1 {
+        font-size: 40px;
+    }
+
+    .account .details {
+        font-size: 22px;
+    }
+
+    .account .details span {
+        font-size: 18px;
+    }
+
+    .order {
+        padding: 20px;
+    }
+
+    .order img {
+        margin: 20px auto;
+        width: 120px;
+        height: 160px;
+    }
+
+    .order .content {
+        text-align: left;
+    }
+
+    .order .button {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+/* Medium to Large Desktop */
+@media (min-width: 1025px) {
+    .hero-profile {
+        padding: 200px 100px;
+    }
+
+    .nav-hero {
+        width: 50%;
+        font-size: 56px;
+    }
+
+    .account {
+        width: 50%;
+        text-align: left;
+   
+    }
+  }
