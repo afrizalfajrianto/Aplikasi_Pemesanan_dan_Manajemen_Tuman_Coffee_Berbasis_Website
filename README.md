@@ -1,10 +1,9 @@
 |  Anggota Kelompok  |
 |----------------|
-|Afrizal Fajrianto Anggara Sakti (312210449)|
-|Dhefi Nurkholik (312210414)|
-|Sandy Ramadhan(312210633)|
-|Ahmad Yuda Ramadhan (312210650)|
-
+|Afrizal Fajrianto Anggara Sakti (312210449) |
+|Dhefi Nurkholik (312210414) |
+|Sandy Ramadhan (312210633) |
+|Ahmad Yuda Ramadhan (312210650) |
 
 
 # ☕ Tuman Coffee – Aplikasi Pemesanan dan Manajemen Berbasis Website
