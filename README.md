@@ -36,3 +36,10 @@
 Klik untuk menonton demo aplikasi di YouTube:  
 👉 [Tonton di YouTube](https://youtu.be/TSKhReE0pE0)
 
+## 🖼️ Poster Proyek  
+Lihat tampilan ringkas proyek melalui poster berikut:  
+🖼️ [Lihat Poster (Google Drive)](https://drive.google.com/file/d/1j4XNK9x0KuNuvu9jIbZjFl6WFahvAxw0/view?usp=sharing)
+
+## 🗣️ Presentasi Proyek  
+Tonton presentasi kelompok kami di sini:  
+🎤 [Tonton Presentasi di YouTube](https://youtu.be/_FaZLccwjv0)
